@@ -25,4 +25,12 @@ func main() {
 	fmt.Println(s2)
 
 	fmt.Printf("s1=%v, len(s1)=%d, cap(s1)=%d\n", s1, len(s1), cap(s1))
+
+
+	//切片操作
+	s3 := append(s2, 10)
+	s4 := append(s3, 11)
+	s5 := append(s4, 12)
+	fmt.Println("s3, s4, s5 =", s3, s4, s5)
+	fmt.Println("arr =", arr)
 }
