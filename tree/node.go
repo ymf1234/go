@@ -2,19 +2,23 @@ package main
 
 import "fmt"
 
+//结构体
 type treeNode struct {
 	value int
 	left, right *treeNode
 }
 
+//打印
 func (node treeNode) print() {
 	fmt.Print(node.value, "")
 }
 
+//修改结构体的值
 func (node *treeNode) setValue(value int) {
 	node.value = value
 }
 
+//遍历（中序遍历）
 func (node *treeNode) traverse() {
 	if node == nil {
 		return
@@ -24,6 +28,7 @@ func (node *treeNode) traverse() {
 	node.right.traverse()
 
 }
+
 
 func createNode(value int) *treeNode {
 	return &treeNode{value: value}
